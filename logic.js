@@ -20,7 +20,7 @@ button.addEventListener("click", async function() {
     console.log(str);
     const resp= await fetch(str, {mode: 'cors'});
   resp.json().then(function(resp) {
-    window.location.replace(resp.links.homepage[0]);
+    window.open(resp.links.homepage[0]);
   
   });
     console.log("button clicked");
