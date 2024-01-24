@@ -37,7 +37,7 @@ async function fetchapi()
  fetchapi();
  function putval(response)
  {     for(let i=0;i<7;i++)
-    {const name=response.coins[i].item.name;
+    {const name=response.coins[i].item.id;
       const icon=response.coins[i].item.large;
       const price=response.coins[i].item.data.price;
       const cap=response.coins[i].item.data.market_cap;

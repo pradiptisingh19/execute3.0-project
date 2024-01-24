@@ -22,8 +22,16 @@ export default class dom{
     //price and intraday should be dipslayed in the same div
     addPrice(card,price,intraday_change){
         const div=document.createElement("div")
-        div.innerHTML="Price: " + price.substr(0,(price.length)>8?8:price.length)
+        price=price.substr(1);
+        const pricenumber=Number(price);
+        const num = parseFloat(price);
+        const numInSciNot = {};
+        [numInSciNot.coefficient, numInSciNot.exponent] =
+        num.toExponential().split('e').map(item => Number(item));
+        
+        div.innerHTML="Price: $" + price
         card.appendChild(div)
+        
         return div
     
     }
