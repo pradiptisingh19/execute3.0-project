@@ -114,3 +114,7 @@ button:hover {
     color: white;
     background-color: rgb(111, 155, 161);
 }
+#text1{
+    text-align: center;
+    font-size: larger ;
+}
