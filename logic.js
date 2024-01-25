@@ -27,17 +27,19 @@ button.addEventListener("click", async function() {
 });
 async function fetchapi()
 {
-  const response= await fetch("https://api.coingecko.com/api/v3/search/trending", {mode: 'cors'});
-  response.json().then(function(response) {
+  let response= await fetch("https://api.coingecko.com/api/v3/search/trending", {mode: 'cors'});
+  response=await response.json();
+  // response.json().then(function(response) {
 
+  // putval(response);
+  // });
   putval(response);
-  });
 }
 
  fetchapi();
  function putval(response)
  {     for(let i=0;i<7;i++)
-    {const name=response.coins[i].item.id;
+    { const name=response.coins[i].item.id;
       const icon=response.coins[i].item.large;
       const price=response.coins[i].item.data.price;
       const cap=response.coins[i].item.data.market_cap;

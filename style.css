@@ -157,7 +157,7 @@ button:hover {
     cursor: pointer;
 
 }
-.card-img:hover{
+.card:hover .card-img{
     transform: rotate(360deg);
     
 }
